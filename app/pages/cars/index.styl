@@ -1,0 +1,25 @@
+.table
+  width 100%
+
+.row
+  &:nth-child(odd)
+    background-color #edfaff
+  &:nth-child(even)
+    background-color #f8fdff
+
+.cell
+  padding 8px 12px
+  border-top 1px #ffffff solid
+  &[data-left]
+    text-align left
+  &[data-center]
+    text-align center
+  &[data-right]
+    text-align right
+
+.cell__compact
+  padding-top 3px
+  padding-bottom 3px
+
+.center
+  text-align center
