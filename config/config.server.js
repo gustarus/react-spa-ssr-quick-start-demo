@@ -30,6 +30,16 @@ module.exports = config => {
     },
 
     {
+      test: /.styl$/,
+      loaders: [
+        'isomorphic-style-loader',
+        'css-loader?modules&importLoaders=2&localIdentName=[name]__[local]--[hash:base64:5]',
+        'postcss-loader',
+        'stylus-loader'
+      ]
+    },
+
+    {
       test: /\.(ttf|eot|woff|woff2|png|ico|jpg|jpeg|gif|css)$/i,
       loader: 'ignore-loader'
     }
@@ -63,6 +73,14 @@ module.exports = config => {
     plugins: [
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      }),
+
+      new webpack.LoaderOptionsPlugin({
+        options: {
+          postcss: [
+            require('autoprefixer')
+          ]
+        }
       })
     ]
   };

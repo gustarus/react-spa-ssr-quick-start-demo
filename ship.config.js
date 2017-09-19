@@ -78,4 +78,5 @@ const staticPathRoot = process.env.NODE_ENV === 'development'
 
 module.exports.build.static = {
   jsUrl: `${staticPathRoot}/${module.exports.build.client.file}`,
+  cssUrl: `${staticPathRoot}/assets/css/style.css`
 };
