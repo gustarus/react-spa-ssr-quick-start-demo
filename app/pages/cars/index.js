@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import {modeSet, apiCarsLoad, apiCarLoad, apiCarSave, apiCarDelete, carUnset} from '@core/actions';
+import {loaderListen, modeSet, apiCarsLoad, apiCarLoad, apiCarSave, apiCarDelete, carUnset} from '@core/actions';
+import pageHOC from '@core/helpers/hocs/page';
 import Block from '@core/components/block';
 import Table from './table';
 import Form from './form';
 
 class CarsPage extends Component {
   static propTypes = {
+    listenLoader: PropTypes.func,
     setMode: PropTypes.func,
     loadCars: PropTypes.func,
     readCar: PropTypes.func,
@@ -44,8 +46,7 @@ class CarsPage extends Component {
       promises.push(unsetCar());
     }
 
-    return promises.length
-      ? Promise.all(promises) : true;
+    return Promise.all(promises);
   }
 
   onModeChange(mode) {
@@ -58,9 +59,9 @@ class CarsPage extends Component {
   }
 
   onDelete(car) {
-    const {deleteCar} = this.props;
+    const {listenLoader, deleteCar} = this.props;
     if (confirm(`Вы действительно хотите удалить модель ${car.code}?`)) {
-      deleteCar(car);
+      listenLoader(deleteCar(car));
     }
   }
 
@@ -121,6 +122,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
+    listenLoader: promise => dispatch(loaderListen(promise)),
     setMode: mode => dispatch(modeSet(mode)),
     loadCars: () => dispatch(apiCarsLoad()),
     readCar: id => dispatch(apiCarLoad(id)),
@@ -130,4 +132,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CarsPage);
+export default connect(mapStateToProps, mapDispatchToProps)(pageHOC(CarsPage));

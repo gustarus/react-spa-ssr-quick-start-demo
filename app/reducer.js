@@ -1,4 +1,5 @@
 const initialState = {
+  loading: false,
   mode: 'default',
   cars: false,
   car: false
@@ -13,6 +14,12 @@ export default function(state, action) {
   switch (action.type) {
     case 'MODE_SET':
       return Object.assign({}, state, {mode: action.value});
+
+    case 'LOADER_SET':
+      return Object.assign({}, state, {loading: action.value});
+
+    case 'LOADER_UNSET':
+      return Object.assign({}, state, {loading: false});
 
     case 'CARS_SET':
       return Object.assign({}, state, {cars: action.items});

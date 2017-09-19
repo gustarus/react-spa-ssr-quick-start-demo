@@ -7,6 +7,24 @@ const api = axios.create({
 });
 
 
+export function loaderSet(value) {
+  return {type: 'LOADER_SET', value};
+}
+
+export function loaderUnset() {
+  return {type: 'LOADER_UNSET'};
+}
+
+export function loaderListen(promise) {
+  return function(dispatch) {
+    setTimeout(() => dispatch(loaderSet(40)), 50);
+    return promise.then(() => {
+      setTimeout(() => dispatch(loaderSet(100)), 100);
+      setTimeout(() => dispatch(loaderUnset()), 1000);
+    });
+  };
+}
+
 export function modeSet(value) {
   return {type: 'MODE_SET', value};
 }

@@ -1,13 +1,6 @@
 {
   "cars": [
     {
-      "id": 1,
-      "code": "Kalina II",
-      "price": "552 800 ₽",
-      "year": "2016",
-      "engine": "1.6 AMT"
-    },
-    {
       "id": 2,
       "code": "Vesta I",
       "price": "630 900 ₽",
@@ -265,6 +258,20 @@
       "price": "579 900 ₽",
       "year": "2017",
       "engine": "1.6 MT"
+    },
+    {
+      "code": "das",
+      "price": "dasd",
+      "year": "dosa",
+      "engine": "das",
+      "id": 39
+    },
+    {
+      "code": "das",
+      "price": "dsa",
+      "year": "ds",
+      "engine": "fas",
+      "id": 40
     }
   ]
 }
