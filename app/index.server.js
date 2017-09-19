@@ -1,5 +1,9 @@
 import Koa from 'koa';
 import serve from 'koa-static-server';
+import React from 'react';
+import ReactDomServer from 'react-dom/server';
+
+import Html from '@server/documents/html';
 
 // import middleware
 import errorMiddleware from '@server/middlewares/error';
@@ -20,15 +24,8 @@ const app = new Koa();
 app.use(errorMiddleware);
 app.use(requestMiddleware);
 app.use(ctx => {
-  ctx.body = `
-    <!doctype html>
-    <html>
-      <head>
-        <script type="text/javascript" src=${config.build.static.jsUrl} defer></script>
-      </head>
-      <body>Hello from the server!</body>
-    </html>
-  `;
+  const component = <Html><p>Hello from the server!</p></Html>;
+  ctx.body = '<!doctype html>\n' + ReactDomServer.renderToString(component);
 });
 
 // handle server errors
