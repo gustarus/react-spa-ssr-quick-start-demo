@@ -15,10 +15,58 @@ export function carsSet(items) {
   return {type: 'CARS_SET', items};
 }
 
+export function carsAdd(items) {
+  return {type: 'CARS_ADD', items};
+}
+
+export function carsDelete(items) {
+  return {type: 'CARS_DELETE', items};
+}
+
+export function carsUnset() {
+  return {type: 'CARS_UNSET'};
+}
+
+export function carSet(item) {
+  return {type: 'CAR_SET', item};
+}
+
+export function carUnset() {
+  return {type: 'CAR_UNSET'};
+}
+
 export function apiCarsLoad() {
   return function(dispatch) {
     return api.get('cars').then(response => {
       dispatch(carsSet(response.data));
+    });
+  };
+}
+
+export function apiCarLoad(id) {
+  return function(dispatch) {
+    return api.get(`cars/${id}`).then(response => {
+      dispatch(carSet(response.data));
+    });
+  };
+}
+
+export function apiCarSave(item) {
+  return function(dispatch) {
+    const chain = item.id
+      ? api.put(`cars/${item.id}`, item)
+      : api.post('cars', item);
+
+    return chain.then(response => {
+      dispatch(carsAdd([response.data]));
+    });
+  };
+}
+
+export function apiCarDelete(item) {
+  return function(dispatch) {
+    return api.delete(`cars/${item.id}`).then(() => {
+      dispatch(carsDelete([item]));
     });
   };
 }

@@ -14,6 +14,16 @@ export default function Table(props) {
     props.onModeChange(mode === MODE_DEFAULT ? MODE_COMPACT : MODE_DEFAULT);
   }
 
+  function onUpdateClick(e, car) {
+    e.preventDefault();
+    props.onUpdate(car);
+  }
+
+  function onDeleteClick(e, car) {
+    e.preventDefault();
+    props.onDelete(car);
+  }
+
   const tableClass = styles.table + ' ' + styles[`table__${mode}`];
   const cellClass = styles.cell + ' ' + styles[`cell__${mode}`];
 
@@ -40,7 +50,20 @@ export default function Table(props) {
               <td className={cellClass} data-center>{car.price}</td>
               <td className={cellClass} data-center>{car.year}</td>
               <td className={cellClass} data-center>{car.engine}</td>
-              <td className={cellClass} data-right>Кнопки управления</td>
+              <td className={cellClass} data-right>
+                <a
+                  href={`/cars/${car.id}/update`}
+                  onClick={e => onUpdateClick(e, car)}
+                  className={styles.action}>
+                  Изменить
+                </a>
+                <a
+                  href='#'
+                  onClick={e => onDeleteClick(e, car)}
+                  className={styles.action}>
+                  Удалить
+                </a>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -51,6 +74,8 @@ export default function Table(props) {
 
 Table.propTypes = {
   onModeChange: PropTypes.func.isRequired,
+  onUpdate: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
 
   mode: PropTypes.string.isRequired,
   cars: PropTypes.array.isRequired
