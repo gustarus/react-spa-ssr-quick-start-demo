@@ -1,13 +1,10 @@
 import Koa from 'koa';
 import serve from 'koa-static-server';
-import React from 'react';
-import ReactDomServer from 'react-dom/server';
-
-import Html from '@server/documents/html';
 
 // import middleware
 import errorMiddleware from '@server/middlewares/error';
 import requestMiddleware from '@server/middlewares/logger';
+import routerMiddleware from '@server/middlewares/router';
 
 // import project configuration
 import {NODE_ENV, HARD_ENV, IS_PRODUCTION} from '@core/constants';
@@ -23,10 +20,7 @@ const app = new Koa();
 // use the middleware
 app.use(errorMiddleware);
 app.use(requestMiddleware);
-app.use(ctx => {
-  const component = <Html><p>Hello from the server!</p></Html>;
-  ctx.body = '<!doctype html>\n' + ReactDomServer.renderToString(component);
-});
+app.use(routerMiddleware);
 
 // handle server errors
 app.on('error', error => {
