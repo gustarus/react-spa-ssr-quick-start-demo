@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import {modeSet} from '@core/actions';
+import {modeSet, apiCarsLoad} from '@core/actions';
 import Block from '@core/components/block';
 import Table from './table';
 
@@ -19,7 +19,7 @@ function CarsPage(props) {
       <Block>
         <Table
           mode={mode}
-          cars={cars}
+          cars={cars || []}
           onModeChange={value => setMode(value)}/>
       </Block>
     </div>
@@ -28,9 +28,19 @@ function CarsPage(props) {
 
 CarsPage.propTypes = {
   setMode: PropTypes.func,
+  loadCars: PropTypes.func,
 
   mode: PropTypes.string,
   cars: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
+};
+
+CarsPage.preload = function(match, dispatch, state) {
+  const {loadCars} = mapDispatchToProps(dispatch);
+  if (!state.api.cars) {
+    return loadCars();
+  }
+
+  return true;
 };
 
 function mapStateToProps(state) {
@@ -42,7 +52,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    setMode: mode => dispatch(modeSet(mode))
+    setMode: mode => dispatch(modeSet(mode)),
+    loadCars: () => dispatch(apiCarsLoad()),
   };
 }
 
