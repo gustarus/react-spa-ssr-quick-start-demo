@@ -7,6 +7,9 @@
 # ignore build results
 /dist
 
+# tests
+__snapshots__
+
 # other ignores
 npm-debug.log
 .DS_Store

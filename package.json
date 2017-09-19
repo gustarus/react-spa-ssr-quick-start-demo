@@ -4,13 +4,14 @@
   "description": "React single page application with server side rendering step-by-step quick start demo.",
   "main": "index.js",
   "scripts": {
+    "test": "$(npm bin)/jest",
     "eslint": "$(npm bin)/eslint app/ --quiet",
     "eslint:fix": "npm run eslint -- --fix",
     "api": "$(npm bin)/json-server --watch db.json",
     "start": "export NODE_ENV=development; export HARD_ENV=development; rship run dev",
     "build": "export NODE_ENV=production; export HARD_ENV=development; rship setup && rship run prod",
     "node": "export NODE_ENV=production; export HARD_ENV=development; node dist/server/server.js",
-    "prepush": "export NODE_ENV=production; export HARD_ENV=development; npm run eslint;"
+    "prepush": "export NODE_ENV=production; export HARD_ENV=development; npm run eslint; npm t"
   },
   "author": "Pavel Kondratenko <iam@kondratenko.me>",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "axios": "0.16.2",
     "babel-core": "6.17.0",
     "babel-eslint": "8.0.0",
+    "babel-jest": "16.0.0",
     "babel-loader": "6.2.5",
     "babel-plugin-module-alias": "1.6.0",
     "babel-plugin-transform-decorators-legacy": "1.3.4",
@@ -40,6 +42,7 @@
     "history": "4.7.2",
     "ignore-loader": "0.1.1",
     "isomorphic-style-loader": "4.0.0",
+    "jest": "21.1.0",
     "json-server": "0.12.0",
     "koa": "2.0.0",
     "koa-logger": "2.0.1",
@@ -52,6 +55,7 @@
     "react-router": "4.2.0",
     "react-router-dom": "4.2.2",
     "react-router-redux": "4.0.8",
+    "react-test-renderer": "15.6.1",
     "redux": "3.7.2",
     "redux-thunk": "2.2.0",
     "rship": "2.1.0",
@@ -61,5 +65,21 @@
     "webpack": "2.2.1",
     "webpack-dev-server": "2.2.1",
     "yargs": "8.0.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "jsx",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/jest/file-stub.js",
+      "^.+\\.(css|styl)$": "<rootDir>/jest/css-stub.js"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/(build|docs|node_modules)/"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "__tests__/[^/]+\\.test\\.js$"
   }
 }
