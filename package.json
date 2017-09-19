@@ -6,6 +6,7 @@
   "scripts": {
     "eslint": "$(npm bin)/eslint app/ --quiet",
     "eslint:fix": "npm run eslint -- --fix",
+    "api": "$(npm bin)/json-server --watch db.json",
     "start": "export NODE_ENV=development; export HARD_ENV=development; rship run dev",
     "build": "export NODE_ENV=production; export HARD_ENV=development; rship setup && rship run prod",
     "node": "export NODE_ENV=production; export HARD_ENV=development; node dist/server/server.js",
@@ -38,6 +39,7 @@
     "history": "4.7.2",
     "ignore-loader": "0.1.1",
     "isomorphic-style-loader": "4.0.0",
+    "json-server": "0.12.0",
     "koa": "2.0.0",
     "koa-logger": "2.0.1",
     "koa-static-server": "1.0.0",

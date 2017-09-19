@@ -1,0 +1,270 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "code": "Kalina II",
+      "price": "552 800 ₽",
+      "year": "2016",
+      "engine": "1.6 AMT"
+    },
+    {
+      "id": 2,
+      "code": "Vesta I",
+      "price": "630 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 3,
+      "code": "(ВАЗ) Granta",
+      "price": "379 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 4,
+      "code": "XRAY I",
+      "price": "685 900 ₽",
+      "year": "2017",
+      "engine": "1.8 MT"
+    },
+    {
+      "id": 5,
+      "code": "(ВАЗ) Granta",
+      "price": "379 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 6,
+      "code": "Vesta I",
+      "price": "554 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 7,
+      "code": "(ВАЗ) Granta",
+      "price": "552 700 ₽",
+      "year": "2017",
+      "engine": "1.6 AMT"
+    },
+    {
+      "id": 8,
+      "code": "2121 (4x4)",
+      "price": "492 900 ₽",
+      "year": "2017",
+      "engine": "1.7 MT"
+    },
+    {
+      "id": 9,
+      "code": "2121 (4x4)",
+      "price": "489 900 ₽",
+      "year": "2017",
+      "engine": "1.7 MT"
+    },
+    {
+      "id": 10,
+      "code": "Kalina II",
+      "price": "497 200 ₽",
+      "year": "2017",
+      "engine": "1.6 AMT"
+    },
+    {
+      "id": 11,
+      "code": "Largus I",
+      "price": "574 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 12,
+      "code": "Largus I",
+      "price": "567 400 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 13,
+      "code": "(ВАЗ) Granta",
+      "price": "518 300 ₽",
+      "year": "2017",
+      "engine": "1.6 AT"
+    },
+    {
+      "id": 14,
+      "code": "Vesta I",
+      "price": "554 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 15,
+      "code": "XRAY I",
+      "price": "710 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 16,
+      "code": "(ВАЗ) Granta",
+      "price": "523 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 17,
+      "code": "Kalina II",
+      "price": "555 800 ₽",
+      "year": "2016",
+      "engine": "1.6 AMT"
+    },
+    {
+      "id": 18,
+      "code": "(ВАЗ) Granta",
+      "price": "383 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 19,
+      "code": "(ВАЗ) Granta",
+      "price": "479 600 ₽",
+      "year": "2017",
+      "engine": "1.6 AMT"
+    },
+    {
+      "id": 20,
+      "code": "Vesta I",
+      "price": "604 900 ₽",
+      "year": "2016",
+      "engine": "1.6 AMT"
+    },
+    {
+      "id": 21,
+      "code": "Granta Sport",
+      "price": "599 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 22,
+      "code": "Kalina II",
+      "price": "525 400 ₽",
+      "year": "2017",
+      "engine": "1.6 AMT"
+    },
+    {
+      "id": 23,
+      "code": "Vesta I",
+      "price": "631 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 24,
+      "code": "XRAY I",
+      "price": "739 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 25,
+      "code": "XRAY I",
+      "price": "739 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 26,
+      "code": "(ВАЗ) Granta",
+      "price": "414 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 27,
+      "code": "(ВАЗ) Granta",
+      "price": "495 100 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 28,
+      "code": "II Cross",
+      "price": "525 800 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 29,
+      "code": "(ВАЗ) Granta",
+      "price": "479 200 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 30,
+      "code": "Vesta I",
+      "price": "554 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 31,
+      "code": "(ВАЗ) Granta",
+      "price": "479 200 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 32,
+      "code": "Vesta I",
+      "price": "680 900 ₽",
+      "year": "2017",
+      "engine": "1.8 AMT"
+    },
+    {
+      "id": 33,
+      "code": "II Cross",
+      "price": "525 800 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 34,
+      "code": "Vesta I",
+      "price": "579 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 35,
+      "code": "Largus I",
+      "price": "675 400 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 36,
+      "code": "II Cross",
+      "price": "551 700 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 37,
+      "code": "Vesta I",
+      "price": "607 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    },
+    {
+      "id": 38,
+      "code": "Vesta I",
+      "price": "579 900 ₽",
+      "year": "2017",
+      "engine": "1.6 MT"
+    }
+  ]
+}
