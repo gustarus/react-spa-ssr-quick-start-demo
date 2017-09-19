@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-decorators-legacy",
+    "transform-object-assign",
+    ["module-alias", [
+      { "src": "./config", "expose": "@configs" }
+    ]]
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}

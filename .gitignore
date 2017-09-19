@@ -4,6 +4,9 @@
 # ignore modules
 /node_modules
 
+# ignore build results
+/dist
+
 # other ignores
 npm-debug.log
 .DS_Store

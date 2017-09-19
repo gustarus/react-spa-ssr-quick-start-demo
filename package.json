@@ -3,9 +3,34 @@
   "version": "0.0.1",
   "description": "React single page application with server side rendering step-by-step quick start demo.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "export NODE_ENV=development; export HARD_ENV=development; rship run dev",
+    "build": "export NODE_ENV=production; export HARD_ENV=development; rship setup && rship run prod",
+    "node": "export NODE_ENV=production; export HARD_ENV=development; node dist/server/server.js",
+    "prepush": "export NODE_ENV=production; export HARD_ENV=development;"
+  },
   "author": "Pavel Kondratenko <iam@kondratenko.me>",
   "license": "ISC",
   "browser": {},
-  "dependencies": {}
+  "dependencies": {
+    "babel-core": "6.17.0",
+    "babel-loader": "6.2.5",
+    "babel-plugin-module-alias": "1.6.0",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-plugin-transform-object-assign": "6.22.0",
+    "babel-plugin-transform-runtime": "6.15.0",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-stage-0": "6.16.0",
+    "babel-runtime": "6.11.6",
+    "file-loader": "0.11.2",
+    "ignore-loader": "0.1.1",
+    "koa": "2.0.0",
+    "koa-logger": "2.0.1",
+    "koa-static-server": "1.0.0",
+    "memory-fs": "0.3.0",
+    "rship": "2.1.0",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.2.1",
+    "yargs": "8.0.2"
+  }
 }
