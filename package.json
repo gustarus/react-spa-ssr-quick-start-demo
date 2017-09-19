@@ -1,0 +1,11 @@
+{
+  "name": "react-spa-ssr-quick-start-demo",
+  "version": "0.0.1",
+  "description": "React single page application with server side rendering step-by-step quick start demo.",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Pavel Kondratenko <iam@kondratenko.me>",
+  "license": "ISC",
+  "browser": {},
+  "dependencies": {}
+}

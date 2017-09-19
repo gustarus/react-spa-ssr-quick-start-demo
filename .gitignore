@@ -1,0 +1,9 @@
+# ignore idea product
+/.idea
+
+# ignore modules
+/node_modules
+
+# other ignores
+npm-debug.log
+.DS_Store
